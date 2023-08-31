@@ -1,0 +1,741 @@
+Script started on Wed 30 Aug 2023 10:06:56 AM UTC
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt-get install git
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 95%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,459 kB of archives.
+After this operation, 22.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]            0% [Connecting to archive.ubuntu.com (91.189.91.82)]0% [Connecting to archive.ubuntu.com (91.189.91.82)]                                                    0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+                        0% [1 liberror-perl 0 B/21.1 kB 0%]                                   1% [Working]            Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.10 [700 kB]
+            1% [2 git-man 0 B/700 kB 0%]                            21% [Working]             21% [Waiting for headers]21% [Waiting for headers]21% [Waiting for headers]21% [Waiting for headers]21% [Waiting for headers]21% [Waiting for headers]                         21% [Waiting for headers]                                          119 kB/s 22s21% [Waiting for headers]                                          119 kB/s 22s21% [Waiting for headers]                                          119 kB/s 22s21% [Waiting for headers]                                          119 kB/s 22s21% [Waiting for headers]                                          119 kB/s 22s21% [Waiting for headers]                                          119 kB/s 22s                                                                               Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.10 [2,737 kB]
+21% [3 git 0 B/2,737 kB 0%]                                        119 kB/s 22s100% [Working]                                                      119 kB/s 0s                                                                               Fetched 3,459 kB in 9s (371 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63238 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+Unpacking liberror-perl (0.17-1.1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.10_all.deb ...
+Unpacking git-man (1:1.9.1-1ubuntu0.10) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.10_amd64.deb ...
+Unpacking git (1:1.9.1-1ubuntu0.10) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up liberror-perl (0.17-1.1) ...
+Setting up git-man (1:1.9.1-1ubuntu0.10) ...
+Setting up git (1:1.9.1-1ubuntu0.10) ...
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ ls
+[0m[01;34mAssignment1_1[0m  my_git_session.txt  my_unix_session.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd Assignment [K![K1_1/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ ls
+file2.txt  [0m[01;34mtest2[0m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ git --version
+git version 1.9.1
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ git config --global user.name "John Doe"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ..
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd ..git --version[K[K[K[K[K[K[K[K[K[K[K[K[Kgit config --global user.name "John Doe"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"D"a"r"s"h"a"n"N"5"4"2"9"
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ git config --global user.email johndoe@example.com[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdarshan.nagesh@tigeranalytics.com
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ git config --list
+user.name=DarshanN5429
+user.email=darshan.nagesh@tigeranalytics.com
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ git config --listglobal user.email darshan.nagesh@tigeranalytics.com[20Pname "DarshanN5429"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[Kgit --versionls[Kcd Assignment1_1/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ mkdir gitTest
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ cd gitTest
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ go[Kit init
+Initialized empty Git repository in /home/vagrant/Assignment1_1/gitTest/.git/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ touch file1.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git [K[K[K[Klstouch file1.txt[5Pgit statusls[Kgit status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mfile1.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git statusls[Kgit status[K[K[K[K[K[Kadd .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .statusls[Kgit status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   file1.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file1.txt
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H"file1.txt" 0L, 0C[>c[2;1H[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H0,0-1[9CAll[1;1H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;13H[K[30;103H0,1[11CAll[1;1H[?12l[?25h[?25lH[30;103H1,2[1;2H[?12l[?25h[?25le[30;105H3[1;3H[?12l[?25h[?25ll[30;105H4[1;4H[?12l[?25h[?25ll[30;105H5[1;5H[?12l[?25h[?25lo[30;105H6[1;6H[?12l[?25h[30;1H[K[1;5H[?25l[30;103H1,5[11CAll[1;5H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"file1.txt" 1L, 6C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file1.txt[2Pgit status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   file1.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   file1.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git statusvi file1.txt[2Pgit status[1Padd .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .statusvi file1.txt[2Pgit status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   file1.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log
+fatal: bad default revision 'HEAD'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git logstatus -s
+[32mA[m  file1.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ cat .gitignore
+cat: .gitignore: No such file or directory
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ touch .gitingonore[K[K[K[K[K[K[Kgnore
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ lstouch .gitignore[K[K[K[K[K[K[K[K[K[Kfile2.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt  file2.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi .gitignore
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H".gitignore" 0L, 0C[>c[2;1H[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H0,0-1[9CAll[1;1H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;14H[K[30;103H0,1[11CAll[1;1H[?12l[?25h[?25l.[30;103H1,2[1;2H[?12l[?25h[?25l/[30;105H3[1;3H[?12l[?25h[?25lf[30;105H4[1;4H[?12l[?25h[?25li[30;105H5[1;5H[?12l[?25h[?25ll[30;105H6[1;6H[?12l[?25h[?25le[30;105H7[1;7H[?12l[?25h[?25l2[30;105H8[1;8H[?12l[?25h[?25l.[30;105H9[1;9H[?12l[?25h[?25lt[30;105H10[1;10H[?12l[?25h[?25lx[30;106H1[1;11H[?12l[?25h[?25lt[30;106H2[1;12H[?12l[?25h[?25l[2;1H[K[30;103H2,1 [2;1H[?12l[?25h[30;1H[K[2;1H[?25l[30;103H2,0-1[9CAll[2;1H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[30;1H[K[30;103H2,0-1[9CAll[2;1H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l".gitignore" 2L, 13C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi .gitignorels[Ktouch file2.txtls[Ktouch .gitignore[2Pcat[C[C[C[C[C[C[C[C[C[C[C[1Pgit status -s[6Plogstatus -scat .gitignore[1Pgit status -s[K[K
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   file1.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.gitignore[m
+	[31mfile2.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .status 
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   .gitignore[m
+	[32mnew file:   file1.txt[m
+	[32mnew file:   file2.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git diff
+[?1h=[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file2.txt
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H"file2.txt" 0L, 0C[>c[2;1H[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H0,0-1[9CAll[1;1H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;13H[K[30;103H2,1[11CAll[2;1H[K[2;1H[?12l[?25h[?25lo[30;105H2[2;2H[?12l[?25h[?25lf[30;105H3[2;3H[?12l[?25h[?25lf[30;105H4[2;4H[?12l[?25h[30;1H[K[2;3H[?25l[30;103H2,3[11CAll[2;3H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"file2.txt" 2L, 5C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file2.txt[4Pgit diff
+[?1h=[1mdiff --git a/file2.txt b/file2.txt[m[m
+[1mindex e69de29..baa7b97 100644[m[m
+[1m--- a/file2.txt[m[m
+[1m+++ b/file2.txt[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[m
+[32m+[m[32moff[m[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git diffvi file2.txt[4Pgit diffstatus 
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   .gitignore[m
+	[32mnew file:   file1.txt[m
+	[32mnew file:   file2.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   file2.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git status [3Pdiffvi file2.txt[4Pgit diffstatus [2Padd .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6            File: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                               [4;1H(B[m# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d# On branch master[7d#[8d# Initial commit[9d#[10d# Changes to be committed:[11d#[9Gnew file:   .gitignore[12d#[9Gnew file:   file1.txt[13d#[9Gnew file:   file2.txt[14d#[28;52H(B[0;7m[ Read 12 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[1;111H(B[0;7mModified[3d(B[mtesting17[4;27r8[4dM[1;30r[4;1H7[4;27r8M[1;30r[5;1H[4;27r[27;1H
+[1;30r[4;1H[4;27r[27;1H
+[1;30r[3;9H[28d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                                            [29;1H Y(B[m Yes[K[30d(B[0;7m N(B[m No  [30;17H(B[0;7m^C(B[m Cancel[K[28;62H(B[0;7mFile Name to Write: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG[29d^G(B[m Get Help[29;31H(B[0;7mM-D(B[m DOS Format[29;61H(B[0;7mM-A(B[m Append[29;91H(B[0;7mM-B(B[m Backup File[30d(B[0;7m^C(B[m Cancel[17G[14X[30;31H(B[0;7mM-M(B[m Mac Format[30;61H(B[0;7mM-P(B[m Prepend[28;76H(B[0;7me(B[m(B[0;7ms(B[m(B[0;7mSave file under DIFFERENT NAME ?                                             [29d Y(B[m Yes[K[30d(B[0;7m N(B[m No    [17G(B[0;7m^C(B[m Cancel[K[28;34H[29d[39;49m(B[m[J[1;28H(B[0;7mFile: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSGes[1;111H        [28;51H(B[m[1K (B[0;7m[ Wrote 12 lines ](B[m[K[30;120H[30;1H[?1049l[?1l>Aborting commit due to empty commit message.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6            File: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                               [4;1H(B[m# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d# On branch master[7d#[8d# Initial commit[9d#[10d# Changes to be committed:[11d#[9Gnew file:   .gitignore[12d#[9Gnew file:   file1.txt[13d#[9Gnew file:   file2.txt[14d#[28;52H(B[0;7m[ Read 12 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[1;111H(B[0;7mModified[3d(B[mtesting17[4;27r8[4dM[1;30r[4;1H7[4;27r8M[1;30r[5;1H[4;27r[4;1HM[1;30r[6;1H[4;27r[27;1H
+[1;30r[5;1H[4;27r[27;1H
+[1;30r[4;1H[4;27r[27;1H
+[1;30r[3;9H[28;45H(B[0;7m[ XOFF ignored, mumble mumble ][3;9H(B[m[28d(B[0;7mFile Name to Write: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                                             [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;76H(B[0;7mm(B[m(B[0;7mm(B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m(B[0;7m (B[m[28;53H[1K (B[0;7m[ Cancelled ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3;9H[28d(B[0;7mFile Name to Write: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                                             [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;76H[1;111H[39;49m(B[0;7m        [28;51H(B[m[1K (B[0;7m[ Wrote 12 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3;9H[28d(B[0;7mFile Name to Write: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                                             [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;76H[28;51H[39;49m(B[m[1K (B[0;7m[ Wrote 12 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3;9H[29d[J[30;120H[30;1H[?1049l[?1l>[master (root-commit) c42bdab] testing1
+ 3 files changed, 5 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log
+[?1h=[33mcommit c42bdab7ca087179b8f7997d6ac14ef1a1795a79[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 10:37:52 2023 +0000[m
+[m
+    testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git status
+On branch master
+nothing to commit, working directory clean
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit --amend
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6            File: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                               [3;1H(B[mtesting1[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   .gitignore[13d#[9Gnew file:   file1.txt[14d#[9Gnew file:   file2.txt[15d#[28;52H(B[0;7m[ Read 13 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[28d(B[0;7mFile Name to Write: /home/vagrant/Assignment1_1/gitTest/.git/COMMIT_EDITMSG                                             [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;76H[28;51H[39;49m(B[m[1K (B[0;7m[ Wrote 13 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[29d[J[30;120H[30;1H[?1049l[?1l>[master 4052fcf] testing1
+ 3 files changed, 5 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit --amend[8Pstatus
+On branch master
+nothing to commit, working directory clean
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -M main
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote add origin git@github.com:DarshanN5429/MLE_Training .git
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push -u origin main
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ECDSA key fingerprint is 7b:99:81:1e:4c:91:a5:0d:5a:2e:2e:80:13:3f:24:ca.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,20.207.73.82' (ECDSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push -u origin mainremote add origin git@github.com:DarshanN5429/MLE_Training..git
+fatal: remote origin already exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote add origin git@github.com:DarshanN5429/MLE_Training..git[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C[Cpush -u origin main[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote add origin git@github.com:DarshanN5429/MLE_Training .git
+fatal: remote origin already exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -M main
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push -u origin main
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ssh -T git@github.com
+Permission denied (publickey).
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote add origin git@github.com:DarshanN5429/TableTest.gi t
+fatal: remote origin already exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote rm origin
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote rm originadd origin git@github.com:DarshanN5429/TableTest.gitt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git remote add origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C[C[C[C[C[C[C[C[Crm origin[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [41Pssh -T git@github.com
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push -u origin main[2Pssh -T git@github.comgit push -u origin main
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push -u origin main
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push -u origin mainremote add origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C[Cpush -u origin main[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit push -u origin mainremote add origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C[C[C[C[C[C[C[C[Crm origin[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [41Pssh -T git@github.com
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push -u origin main[2Pssh -T git@github.com
+Permission denied (publickey).
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ssh-keygen -t rsa -b 4096 -C "darshan.nagesh@tigeranalytics.co m"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/vagrant/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/vagrant/.ssh/id_rsa.
+Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
+The key fingerprint is:
+8e:86:15:13:8f:4a:54:c1:4e:16:be:77:e8:6c:83:94 darshan.nagesh@tigeranalytics.com
+The key's randomart image is:
++--[ RSA 4096]----+
+|    .o=o         |
+|   . .++         |
+|    .+= .        |
+|   . ..= .       |
+|    . E S .      |
+|     + B .       |
+|    . + *        |
+|     . . .       |
+|                 |
++-----------------+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ssh-keygen -t rsa -b 4096 -C "darshan.nagesh@tigeranalytics.comm"[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C -T git@github.com[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push -u origin mainremote add origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C[C[C[C[C[C[C[C[Crm origin[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [41Pssh -T git@github.com
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push -u origin main[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ..//[K..
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ ls
+[0m[01;34mAssignment1_1[0m  my_git_session.txt  my_unix_session.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$  /home/vagrant/.ssh/id_rsa.pub.[Kc /home/vagrant/.ssh/id_rsa.pubd /home/vagrant/.ssh/id_rsa.pub
+bash: cd: /home/vagrant/.ssh/id_rsa.pub: Not a directory
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd ..
+]0;vagrant@vagrant-ubuntu-trusty-64: /homevagrant@vagrant-ubuntu-trusty-64:/home$ ls
+[0m[01;34mubuntu[0m  [01;34mvagrant[0m
+]0;vagrant@vagrant-ubuntu-trusty-64: /homevagrant@vagrant-ubuntu-trusty-64:/home$ cd[K[Klscd ../home/vagrant/.ssh/id_rsa.pub[1Pvagrant/.ssh/id_rsa.pub[1Pvagrant/.ssh/id_rsa.pub[1Pvagrant/.ssh/id_rsa.pub[1Pvagrant/.ssh/id_rsa.pub[1Pvagrant/.ssh/id_rsa.pub[1Pvagrant/.ssh/id_rsa.pub[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCgfVGd3wmK1ZvSbUBiIMJ+wRGbAg9jz3E4Jaal0u/ngL1sIDqwM+Ifswd71LNaYpTJHBT945ZB1nhieUJSVLs36V7SVW6co18mujMoP3BT4U0wZd6ncmOXx/aDWncMUEvG98A0ocTIQ2jLARPn9bqGwYHzEHF5+FWKI1tB9tgEtImTDOAPR09rFVYhFx7xfn1rZekGAYWLk6IhfFVXcjoZb5LHAImlW6FAN93geP8SuuOLYvhATLSJ90gRrR0Gus89vLyT8Y49Crf9vaNXZoZV9PVaFaboknG4FeBhboTLXEMi4OTAwVuthT5/5e2DbtDRcdKD1/37oJkjeTSQBJ4jDP3yIuF/POnY2/bRF0q1eG843AK6qI1A91vG0IT4lsJx/9+UZTz5qJayEO0Lw8wHzdR9FS2J7IsIBp/AWl9+O9cXKWSyD1dINMV14HJlGHQny5/LUG6zZPhVRnQLW2z1OLG6OD1K7DOX5iPXM8cBBsEJ5NvX6KtcFX6g8LF2T5aQ7p5Ww3xiGvgj47Z91wEU43dJ+VbpoFHgz6lVb145mHzzSZa85F941kfZQ2K3hObxiaw5mA8QL5WmpHJhJwdbtfzXz4hpHnPQNDNcKzCzwU0RK1dAp5GI5Nsu66YTP2XrozztxDMDHpK9tNRGCCtmKxGspszJ83NHPDAlENgzzw== darshan.nagesh@tigeranalytics.com
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ cd ../../
+]0;vagrant@vagrant-ubuntu-trusty-64: /homevagrant@vagrant-ubuntu-trusty-64:/home$ cd vargrant[1Pgrant[C[C[C[C[C
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ ls
+[0m[01;34mAssignment1_1[0m  my_git_session.txt  my_unix_session.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd ASS[K[Kssignment1_1/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ cd[K[Kls
+file2.txt  [0m[01;34mgitTest[0m  [01;34mtest2[0m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ cd gitTest
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ cd gitTestls[Kcd Assignment1_1/ls[Kcd vagrant[1P../../at id_rsa.publs[Kcd vagrant/.sshls[Kcd ../home/vagrant/.ssh/id_rsa.publs[Kcd ../..ssh-keygen -t rsa -b 4096 -C "darshan.nagesh@tigeranalytics.comm"[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C -T git@github.com[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push -u origin mainremote add origin git@github.com:DarshanN5429/TableTest.gitt[A]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ [C[C[C[Cpush -u origin main[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Enter passphrase for key '/home/vagrant/.ssh/id_rsa': 
+ERROR: You're using an RSA key with SHA-1, which is no longer allowed. Please use a newer client or a different key type.
+Please see https://github.blog/2021-09-01-improving-git-protocol-security-github/ for more information.
+
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ cd ../../
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd.[K ..
+]0;vagrant@vagrant-ubuntu-trusty-64: /homevagrant@vagrant-ubuntu-trusty-64:/home$ cd [K[K[Kcd ../../git push -u origin main[13Pcd gitTestls[Kcd Assignment1_1/ls[Kcd vagrant[1P../../at id_rsa.publs[Kcd vagrant/.ssh[K[K[K[K[K[Kt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ ls
+[0m[01;34mAssignment1_1[0m  my_git_session.txt  my_unix_session.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ lscd vagrant..[K/../[Kvagrant/.ssh
+bash: cd: vagrant/.ssh: No such file or directory
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd ../[K[K[K[K[K[Kcd vagrant/.sshls[Kcd vagrant..[K/../git push -u origin main[13Pcd gitTestls[Kcd Assignment1_1/ls[Kcd vagrant[1P../../at id_rsa.publs[Kcd vagrant/.ssh
+bash: cd: vagrant/.ssh: No such file or directory
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd vagrant/.sshls[Kcd vagrant..[K/../git push -u origin main[13Pcd gitTestls[Kcd Assignment1_1/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ../
+]0;vagrant@vagrant-ubuntu-trusty-64: /homevagrant@vagrant-ubuntu-trusty-64:/home$ cd [K[K[Kcd ../vagrant/.ssh
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ ssh-keygen -t ed25519 -C "darshan.nagesh@tigeranalytics.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/vagrant/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/vagrant/.ssh/id_ed25519.
+Your public key has been saved in /home/vagrant/.ssh/id_ed25519.pub.
+The key fingerprint is:
+9d:89:f4:f0:ec:0b:43:2d:96:d0:bc:a1:3e:46:7a:33 darshan.nagesh@tigeranalytics.com
+The key's randomart image is:
++--[ED25519  256--+
+|                 |
+|       o         |
+|      . *        |
+|       + % o     |
+|      o S O      |
+|     + o o       |
+|    . E o .      |
+|     o + o .     |
+|          .      |
++-----------------+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ cd ../
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ ls
+[0m[01;34mAssignment1_1[0m  my_git_session.txt  my_unix_session.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd[K[Kcd ..s[K[Kssh[K[K[K[K[K[K[Kcd .ssh/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAXKyjx5zoCQO6ZHaS8G4N90HOLb9k7zN5kLeWX64q+n darshan.nagesh@tigeranalytics.com
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/.sshvagrant@vagrant-ubuntu-trusty-64:~/.ssh$ cd ../.[K[K
+]0;vagrant@vagrant-ubuntu-trusty-64: ~vagrant@vagrant-ubuntu-trusty-64:~$ cd Assignment1_1/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1vagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1$ cd gitTest/
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ cd gitTest/Assignment1_1/..[Kat id_ed25519.pub[10Pd .ssh/ls[Kcd ../ssh-keygen -t ed25519 -C "darshan.nagesh@tigeranalytics.com"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd vagrant/.ssh../[Kvagrant/.sshls[Kcd vagrant..[K/../git push -u origin main
+Enter passphrase for key '/home/vagrant/.ssh/id_ed25519': 
+Counting objects: 5, done.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  20% (1/5)   Writing objects:  40% (2/5)   Writing objects:  60% (3/5)   Writing objects:  80% (4/5)   Writing objects: 100% (5/5)   Writing objects: 100% (5/5), 328 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+remote: To git@github.com:DarshanN5429/TableTest.git
+ * [new branch]      main -> main
+Branch main set up to track remote branch main from origin.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ hit [K[K[K[Kgit log --online
+fatal: unrecognized argument: --online
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log --onlineeline
+[?1h=[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch
+* [32mmain[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git[K[K[Kgit branch test1
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch test1[K
+* [32mmain[m
+  test1[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout test1
+Switched to branch 'test1'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout test1[8Pbranch
+  main[m
+* [32mtest1[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log
+[?1h=[33mcommit 4052fcf0185febf3211553405d8efc1adff90dfd[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 10:37:52 2023 +0000[m
+[m
+    testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt  file2.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file[K[K[K[K[K[Ki file1.txt[K[K[K[K[K[K[K[K[K[K[K[Ktouch file3.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git status
+On branch test1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mfile3.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git statustouch file3.txtls[Kgit logbranchcheckout test1[K[K[K[K[Kmain
+Switched to branch 'main'
+Your branch is up-to-date with 'origin/main'.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout main[7Pstatus
+On branch main
+Your branch is up-to-date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mfile3.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git statuscheckout main[K[K[K[Ktest1
+Switched to branch 'test1'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout test1[8Pstatus[K[K[K[K[K[Kadd .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "File 3 added"
+[test1 d39320f] File 3 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file3.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "File 3 added"add .[Kcheckout test1[8Pstatus
+On branch test1
+nothing to commit, working directory clean
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log
+[?1h=[33mcommit d39320f75a2ce00659145934e9f3547c607c02d1[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 13:00:43 2023 +0000[m
+[m
+    File 3 added[m
+[m
+[33mcommit 4052fcf0185febf3211553405d8efc1adff90dfd[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 10:37:52 2023 +0000[m
+[m
+    testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git logstatuscommit -m "File 3 added"add .[Kcheckout test1[K[K[K[K[Kmain
+Switched to branch 'main'
+Your branch is up-to-date with 'origin/main'.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout mainlog[K
+[?1h=[33mcommit 4052fcf0185febf3211553405d8efc1adff90dfd[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 10:37:52 2023 +0000[m
+[m
+    testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout -b test2
+Switched to a new branch 'test2'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout -b test2[K[K[K[K[K[K[K[K[K
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout[K[K[K[K[K[K[K[Kbrsnc[K[K[K[Kranch
+  main[m
+  test1[m
+* [32mtest2[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt  file2.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git status
+On branch test2
+nothing to commit, working directory clean
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ gti branch -D test2
+No command 'gti' found, did you mean:
+ Command 'gtf' from package 'xserver-xorg-core' (main)
+ Command 'gt5' from package 'gt5' (universe)
+ Command 'bti' from package 'bti' (universe)
+ Command 'ti' from package 'ticgit' (universe)
+ Command 'gt' from package 'genometools' (universe)
+ Command 'gtm' from package 'postgres-xc' (universe)
+ Command 'gtv' from package 'smpeg-gtv' (universe)
+ Command 'gtg' from package 'gtg' (universe)
+ Command 'gsi' from package 'gambc' (universe)
+ Command 'git' from package 'git' (main)
+ Command 'gri' from package 'gri' (universe)
+gti: command not found
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ gti branch -D test2[9Pit statusti branch -D test2[1P[1P[1@i[1@t
+error: Cannot delete the branch 'test2' which you are currently on.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -D test2ti[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pit statusls[Kgit branchcheckout yesy1[K[K[K[K[Ktest1
+Switched to branch 'test1'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout test1branch -D test2
+Deleted branch test2 (was 4052fcf).
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -D test2[K[K[K[K[K[K[K[K[K
+  main[m
+* [32mtest1[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -D test2[K
+  main[m
+* [32mtest1[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -D test2[K[Kgit branch -D test2[1Pcheckout test1branch -D test2ti[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pit status
+On branch test1
+nothing to commit, working directory clean
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push origin test1
+Enter passphrase for key '/home/vagrant/.ssh/id_ed25519': 
+Counting objects: 4, done.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 280 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+remote: 
+remote: Create a pull request for 'test1' on GitHub by visiting:[K
+remote:      https://github.com/DarshanN5429/TableTest/pull/new/test1[K
+remote: 
+To git@github.com:DarshanN5429/TableTest.git
+ * [new branch]      test1 -> test1
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log
+[?1h=[33mcommit d39320f75a2ce00659145934e9f3547c607c02d1[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 13:00:43 2023 +0000[m
+[m
+    File 3 added[m
+[m
+[33mcommit 4052fcf0185febf3211553405d8efc1adff90dfd[m[m
+Author: DarshanN5429 <darshan.nagesh@tigeranalytics.com>[m
+Date:   Wed Aug 30 10:37:52 2023 +0000[m
+[m
+    testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git pull origin test1
+Enter passphrase for key '/home/vagrant/.ssh/id_ed25519': 
+remote: Enumerating objects: 5, done.[K
+remote: Counting objects:  20% (1/5)[Kremote: Counting objects:  40% (2/5)[Kremote: Counting objects:  60% (3/5)[Kremote: Counting objects:  80% (4/5)[Kremote: Counting objects: 100% (5/5)[Kremote: Counting objects: 100% (5/5), done.[K
+remote: Compressing objects:  50% (1/2)[Kremote: Compressing objects: 100% (2/2)[Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From github.com:DarshanN5429/TableTest
+ * branch            test1      -> FETCH_HEAD
+   d39320f..aff087a  test1      -> origin/test1
+Updating d39320f..aff087a
+Fast-forward
+ file3.txt | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git pull origin test1log[K --oneline
+[?1h=[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout main
+Switched to branch 'main'
+Your branch is up-to-date with 'origin/main'.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout mainlog --oneline
+[?1h=[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git merge test1
+Updating 4052fcf..aff087a
+Fast-forward
+ file3.txt | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git merge test1log --oneline
+[?1h=[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log --oneline[2Pmerge test1log --onelinecheckout main[K[K[K[Ktest1
+Switched to branch 'test1'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt  file2.txt  file3.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file.txt
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H"file.txt" [New File][>c[2;1H[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H0,0-1[9CAll[1;1H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;13H[K[30;103H0,1[11CAll[1;1H[?12l[?25h[?25lg[30;103H1,2[1;2H[?12l[?25h[?25lf[30;105H3[1;3H[?12l[?25h[?25lh[30;105H4[1;4H[?12l[?25h[?25lg[30;105H5[1;5H[?12l[?25h[?25lc[30;105H6[1;6H[?12l[?25h[?25lh[30;105H7[1;7H[?12l[?25h[?25lg[30;105H8[1;8H[?12l[?25h[?25lc[30;105H9[1;9H[?12l[?25h[30;1H[K[1;8H[?25l[30;103H1,8[11CAll[1;8H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"file.txt" [New] 1L, 9C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file.txtls[Kgit checkout test1[K[K[K[K[K[K[K[K[K[K[K[K[K[Kstatus
+On branch test1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mfile.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ gir [K[Kt commit -am "file"
+On branch test1
+Untracked files:
+	[31mfile.txt[m
+
+nothing added to commit but untracked files present
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .[Kgit add .commit -am "file"[11Pstatus
+On branch test1
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   file.txt[m
+
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git status[1Padd .commit -am "file"[11Pstatusvi file.txtls[Kgit checkout test1ls[Kvi file.txt[1Pgit statuscommit -am "file"add .[Kstatus[Kgit status[1Padd .commit -am "file"[11Pstatusvi file.txtls[Kgit checkout test1[K[K[K[K[Kmain[K[K[K[K[K[K[K[K[K[K[K[K[K[K log --oneline
+[?1h=[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log --oneline[7Pstatus[1Padd .commit -am "file"add .[Kcommit -am "file"[1P
+[test1 fbf65b3] file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "file"[3Plog --oneline[7Pstatus[1Padd .commit -am "file"[11Pstatuscommit -am "file"add .[Kstatuslog --onelinecommit -m "file"[3Plog --oneline
+[?1h=[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git check [Kout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout mainlog --onelinecommit -m "file"[3Plog --oneline[7Pstatus[1Padd .commit -am "file"[11Pstatusvi file.txtls[K[K[Kgit loh --oneline
+git: 'loh' is not a git command. See 'git --help'.
+
+Did you mean this?
+	log
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git loh --oneline[C[1P --onelineg --oneline
+[?1h=[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git merge test1
+Updating aff087a..fbf65b3
+Fast-forward
+ file.txt | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git merge test1log --oneline
+[?1h=[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout test1
+Switched to branch 'test1'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file.txt
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H"file.txt" 1L, 9C[>c[1;1Hgfhgchgc
+[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H1,1[11CAll[1;1H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;13H[K[30;103H1,1[11CAll[1;1H[?12l[?25h[?25l[1;1H[K[2;1Hgfhgchgc[2;9H[K[30;103H2[2;1H[?12l[?25h[?25l[30;103H1[1;1H[?12l[?25h[?25lG[30;105H2[1;2H[?12l[?25h[?25lo[30;105H3[1;3H[?12l[?25h[?25lo[30;105H4[1;4H[?12l[?25h[?25ld[30;105H5[1;5H[?12l[?25h[?25l[30;105H6[1;6H[?12l[?25h[30;1H[K[1;5H[?25l[30;103H1,5[11CAll[1;5H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"file.txt" 2L, 15C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file.txtgit checkout test1[K[K[K[K[K[K[K[K[K[K[K[K[K[Kadd .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .vi file.txtgit checkout test1[1Plog --oneline[2Pmerge test1log --onelineh[C[C[C[C[C[C[C[C[C[Ccheckout mainlog --onelinecommit -m "file" "e"d"i"t"e"d"
+[test1 667e727] file edited
+ 1 file changed, 1 insertion(+)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "file edited"add .[Kvi file.txtgit checkout test1[1Plog --oneline
+[?1h=[33m667e727[m file edited[m
+[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout mainlog --oneline
+[?1h=[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log --onelinecheckout mainlog --onelinecommit -m "file edited"add .[Kvi file.txt
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H"file.txt" 1L, 9C[>c[1;1Hgfhgchgc
+[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H1,1[11CAll[1;1H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;13H[K[30;103H1,1[11CAll[1;1H[?12l[?25h[?25lngfhgchgc[30;105H2[1;2H[?12l[?25h[?25l gfhgchgc[30;105H3[1;3H[?12l[?25h[?25lgfhgchgc[1;10H[K[30;105H2[1;2H[?12l[?25h[?25lgfhgchgc[1;9H[K[30;105H1[1;1H[?12l[?25h[?25ligfhgchgc[30;105H2[1;2H[?12l[?25h[?25lgfhgchgc[1;9H[K[30;105H1[1;1H[?12l[?25h[?25lmgfhgchgc[30;105H2[1;2H[?12l[?25h[?25lagfhgchgc[30;105H3[1;3H[?12l[?25h[?25ligfhgchgc[30;105H4[1;4H[?12l[?25h[?25lngfhgchgc[30;105H5[1;5H[?12l[?25h[?25l gfhgchgc[30;105H6[1;6H[?12l[?25h[?25lGgfhgchgc[30;105H7[1;7H[?12l[?25h[?25logfhgchgc[30;105H8[1;8H[?12l[?25h[?25logfhgchgc[30;105H9[1;9H[?12l[?25h[?25ldgfhgchgc[30;105H10[1;10H[?12l[?25h[?25l[1;10H[K[2;1Hgfhgchgc[2;9H[K[30;103H2,1 [2;1H[?12l[?25h[30;1H[K[2;1H[?25l[30;103H2,1[11CAll[2;1H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"file.txt" 2L, 19C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file.txtgit log --onelinecheckout mainlog --onelinecommit -m "file edited"add .[Kcommit -m "file edited" "i"n" "m"a"i"n"
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	[31mmodified:   file.txt[m
+
+no changes added to commit
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .commit -m "file edited in main"
+[main 655e9a3] file edited in main
+ 1 file changed, 1 insertion(+)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "file edited in main"add .[Kcommit -m "file edited in main"vi file.txt[Kgit log --oneline
+[?1h=[33m655e9a3[m file edited in main[m
+[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git merge test1
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ vi file.txt
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H"file.txt" 6L, 60C[>c[1;1H<<<<<<< HEAD
+main Good
+=======
+Good
+>>>>>>> test1
+gfhgchgc
+[94m~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H1,1[11CAll[1;1H[?12l[?25h[?25l[30;103H2[2;1H[?12l[?25h[?25l[30;103H3[3;1H[?12l[?25h[?25l[30;105H2[3;2H[?12l[?25h[?25l[30;105H3[3;3H[?12l[?25h[?25l[30;105H4[3;4H[?12l[?25h[?25l[30;105H5[3;5H[?12l[?25h[?25l[30;105H6[3;6H[?12l[?25h[?25l[30;105H7[3;7H[?12l[?25h[?25l[30;1H[1m-- INSERT --[m[30;13H[K[30;103H3,7[11CAll[3;7H[?12l[?25h[?25l[30;105H8[3;8H[?12l[?25h[?25l[3;7H[K[30;105H7[3;7H[?12l[?25h[?25l[3;6H[K[30;105H6[3;6H[?12l[?25h[?25l[3;5H[K[30;105H5[3;5H[?12l[?25h[?25l[3;4H[K[30;105H4[3;4H[?12l[?25h[?25l[3;3H[K[30;105H3[3;3H[?12l[?25h[?25l[3;2H[K[30;105H2[3;2H[?12l[?25h[?25l[3;1H[K[30;105H1[3;1H[?12l[?25h[?25l[30;103H4[4;1H[?12l[?25h[?25l[30;103H5[5;1H[?12l[?25h[?25l[30;105H2[5;2H[?12l[?25h[?25l[30;105H3[5;3H[?12l[?25h[?25l[30;105H4[5;4H[?12l[?25h[?25l[30;105H5[5;5H[?12l[?25h[?25l[30;105H6[5;6H[?12l[?25h[?25l[30;105H7[5;7H[?12l[?25h[?25l[30;105H8[5;8H[?12l[?25h[?25l[30;105H9[5;9H[?12l[?25h[?25ltest1[5;13H[K[30;105H8[5;8H[?12l[?25h[?25ltest1[5;12H[K[30;105H7[5;7H[?12l[?25h[?25ltest1[5;11H[K[30;105H6[5;6H[?12l[?25h[?25ltest1[5;10H[K[30;105H5[5;5H[?12l[?25h[?25ltest1[5;9H[K[30;105H4[5;4H[?12l[?25h[?25ltest1[5;8H[K[30;105H3[5;3H[?12l[?25h[?25ltest1[5;7H[K[30;105H2[5;2H[?12l[?25h[?25ltest1[5;6H[K[30;105H1[5;1H[?12l[?25h[?25l[30;103H4[4;1H[?12l[?25h[?25l[30;103H3[3;1H[?12l[?25h[?25l[30;103H2[2;1H[?12l[?25h[?25l[30;103H1[1;1H[?12l[?25h[?25l[30;105H2[1;2H[?12l[?25h[?25l[30;105H3[1;3H[?12l[?25h[?25l[30;105H4[1;4H[?12l[?25h[?25l[30;105H5[1;5H[?12l[?25h[?25l[30;105H6[1;6H[?12l[?25h[?25l[30;105H7[1;7H[?12l[?25h[?25l[30;105H8[1;8H[?12l[?25h[?25l[30;105H9[1;9H[?12l[?25h[?25lHEAD[1;12H[K[30;105H8[1;8H[?12l[?25h[?25lHEAD[1;11H[K[30;105H7[1;7H[?12l[?25h[?25lHEAD[1;10H[K[30;105H6[1;6H[?12l[?25h[?25lHEAD[1;9H[K[30;105H5[1;5H[?12l[?25h[?25lHEAD[1;8H[K[30;105H4[1;4H[?12l[?25h[?25l[30;105H5[1;5H[?12l[?25h[?25l[30;105H6[1;6H[?12l[?25h[?25l[30;105H7[1;7H[?12l[?25h[?25l[30;105H8[1;8H[?12l[?25h[?25l[1;7H[K[30;105H7[1;7H[?12l[?25h[?25l[1;6H[K[30;105H6[1;6H[?12l[?25h[?25l[1;5H[K[30;105H5[1;5H[?12l[?25h[?25l[1;4H[K[30;105H4[1;4H[?12l[?25h[?25l[1;3H[K[30;105H3[1;3H[?12l[?25h[?25l[1;2H[K[30;105H2[1;2H[?12l[?25h[?25l[1;1H[K[30;105H1[1;1H[?12l[?25h[30;1H[K[1;1H[?25l[30;103H1,0-1[9CAll[1;1H[?12l[?25h[?25l[30;103H[K[30;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h:[?25l[?12l[?25h[?25l[30;4H[K[30;4H[?12l[?25h[?25l"file.txt" 6L, 33C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git add .
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "Bith[K[K[Koth:[K"
+[main 3f6b30f] Both
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git commit -m "Both"add .[Kvi file.txtgit merge test1log --onelinecommit -m "file edited in main"[18Plog --oneline
+[?1h=[33m3f6b30f[m Both[m
+[33m655e9a3[m file edited in main[m
+[33m667e727[m file edited[m
+[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ it log --oneline --decorate[1@g
+[?1h=[33m3f6b30f[m[33m ([1;36mHEAD[m[33m, [1;32mmain[m[33m)[m Both[m
+[33m655e9a3[m file edited in main[m
+[33m667e727[m[33m ([1;32mtest1[m[33m)[m file edited[m
+[33mfbf65b3[m file[m
+[33maff087a[m[33m ([1;31morigin/test1[m[33m)[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m[33m ([1;31morigin/main[m[33m)[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git check [Kot [K[Kut test1
+Switched to branch 'test1'
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git pusg [K[Kh origin tre[K[Kest1
+Enter passphrase for key '/home/vagrant/.ssh/id_ed25519': 
+Counting objects: 7, done.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 527 bytes | 0 bytes/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 1 local object.[K
+remote: To git@github.com:DarshanN5429/TableTest.git
+   aff087a..667e727  test1 -> test1
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git push origin test1[3Pcheckout[C[C[C[C[C[C[3@push origin[C[C[C[C[C[C[3Pcheckout[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[Kbranch -D e[Ktest1
+error: Cannot delete the branch 'test1' which you are currently on.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -D test1[2@push origin[C[C[C[C[C[C[3Pcheckout[C[C[C[C[C[C[K[K[K[K[Kmain'[K
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git checkout mainbranch -D test1
+Deleted branch test1 (was 667e727).
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git branch -D test1[K[K[K[K[K[K[K[K[K
+* [32mmain[m
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git h[Kfetch [K
+Enter passphrase for key '/home/vagrant/.ssh/id_ed25519': 
+remote: Enumerating objects: 2, done.[K
+remote: Counting objects:  50% (1/2)[Kremote: Counting objects: 100% (2/2)[Kremote: Counting objects: 100% (2/2), done.[K
+remote: Compressing objects:  50% (1/2)[Kremote: Compressing objects: 100% (2/2)[Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  50% (1/2)   Unpacking objects: 100% (2/2)   Unpacking objects: 100% (2/2), done.
+From github.com:DarshanN5429/TableTest
+   4052fcf..ea8dcb4  main       -> origin/main
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ ls
+file1.txt  file2.txt  file3.txt  file.txt
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ git log --oneline
+[?1h=[33m3f6b30f[m Both[m
+[33m655e9a3[m file edited in main[m
+[33m667e727[m file edited[m
+[33mfbf65b3[m file[m
+[33maff087a[m Update file3.txt[m
+[33md39320f[m File 3 added[m
+[33m4052fcf[m testing1[m
+[K[?1l>]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ grt [K[K[Kit merge
+fatal: No commit specified and merge.defaultToUpstream not set.
+]0;vagrant@vagrant-ubuntu-trusty-64: ~/Assignment1_1/gitTestvagrant@vagrant-ubuntu-trusty-64:~/Assignment1_1/gitTest$ exit
+Script done on Thu 31 Aug 2023 01:02:50 AM UTC
